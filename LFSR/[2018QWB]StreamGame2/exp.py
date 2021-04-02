@@ -10,10 +10,10 @@ for i in bytes:
 		key += (8 - len(bin(i)[2:])) * "0" + bin(i)[2:]
 	else:
 		key += bin(i)[2:]
-key = key[:19]
-for i in range(19):
+key = key[:21]
+for i in range(21):
 	res = key[-1]
-	key = key[:18]
-	awns = chr(int(res) ^ int(key[-17]) ^ int(key[-14]) ^ int(key[-13]) ^ int(key[-9]) ^ int(key[-5]) ^ int(key[-4]) ^ int(key[-3]) + 48)
+	key = key[:20]
+	awns = chr(int(res) ^ int(key[-2]) + 48)
 	key = awns + key
 print("flag{" + key + "}")
